@@ -16,7 +16,7 @@ export default function MainPage({ data, isPrivateModeOn }) {
               <div className="mobile-body__title">
                 <p className="mobile-body__text">{d.group}</p>
                 <p className="mobile-body__text mobile-body__text--mod">
-                  Group: {d.category}
+                  {`Group: ${d.category}`}
                 </p>
               </div>
             </div>
