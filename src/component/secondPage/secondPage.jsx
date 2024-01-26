@@ -30,6 +30,7 @@ export default function SecondPage({ data }) {
           <label className="form__label">
             Create a Group
             <input
+              autoComplete="off"
               type="text"
               name="name"
               placeholder="Group Name"
