@@ -6,11 +6,12 @@
   padding: 20px 20px;
 
   &__header {
-    background-image: url("../../photos/IMG_AE3BDB1DAA2D-1.jpeg");
-    width: 100%;
-    height: 327px;
+    background-image: url("../../photos/IMG_8E94DD507863-1.jpeg");
+    width: inherit;
+    height: 331px;
+    margin-left: -20px;
     margin-top: -20px;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -18,17 +19,32 @@
 
   &__switch {
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    padding-left: 17px;
 
     &-block {
       background-color: rgb(28, 28, 30);
-      margin-top: 20px;
-      border-radius: 7px;
+      margin-top: 4px;
+      margin-left: -3px;
+      width: 366px;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
       padding: 5px 10px 5px 17px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: start;
     }
+    &--mod {
+      margin-left: auto;
+    }
+  }
+
+  &__avatar {
+    background-image: url("../../photos/study_mode_image.png");
+    background-size: cover;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 7px;
   }
 }

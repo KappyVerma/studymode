@@ -33,7 +33,7 @@
   }
 
   &__label {
-    color: white;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 600;
   }
@@ -45,5 +45,10 @@
     outline: none;
     width: 100%;
     margin: 10px 0;
+
+    &--category {
+      background-color: #ffffff;
+      color: #323232;
+    }
   }
 }

@@ -10,8 +10,14 @@ export default function SettingPage({ clickHandler, isPrivateModeOn }) {
     <div className="mobile">
       <div className="mobile__header"></div>
       <div className="mobile__switch-block">
-        <p className="mobile__switch">Study Mode</p>
-        <Switch {...label} onClick={clickHandler} checked={isPrivateModeOn} />
+        <div className="mobile__avatar"></div>
+        <p className="mobile__switch"> Study Mode</p>
+        <Switch
+          className="mobile__switch--mod"
+          {...label}
+          onClick={clickHandler}
+          checked={isPrivateModeOn}
+        />
       </div>
       <Link to="/" className="footer footer__settings"></Link>
     </div>

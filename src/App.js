@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./component/mainPage/mainPage";
 import SecondPage from "./component/secondPage/secondPage";
 import SettingPage from "./component/settingPage/settingPage";
-
 import data from "./data/data.json";
 import { useState } from "react";
 import "./App.scss";
@@ -28,7 +27,6 @@ function App() {
             path="setting"
             element={
               <SettingPage
-                data={data}
                 clickHandler={clickHandler}
                 isPrivateModeOn={isPrivateModeOn}
               />

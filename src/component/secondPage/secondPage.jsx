@@ -6,9 +6,6 @@ export default function SecondPage({ data }) {
   const Navigate = useNavigate();
   const eventHandler = (event) => {
     event.preventDefault();
-    if (!event.target.name.value || !event.target.category.value) {
-      return;
-    }
 
     const newGroup = {
       group: event.target.name.value,
@@ -41,12 +38,17 @@ export default function SecondPage({ data }) {
           </label>
           <label className="form__label">
             Group Category
-            <input
-              type="text"
+            <select
               name="category"
-              placeholder="Group Category"
               className="form__input form__input--category"
-            />
+            >
+              <option value="default">Default</option>
+              <option value="studies">Studies</option>
+              <option value="work">Work</option>
+              <option value="sports">Sports</option>
+              <option value="family">Family</option>
+              <option value="friends">Friends</option>
+            </select>
           </label>
         </div>
       </form>
