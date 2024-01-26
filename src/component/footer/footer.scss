@@ -1,0 +1,16 @@
+.footer {
+  background-image: url("../../photos/IMG_1E481F962E51-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 71px;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  &__settings {
+    background-image: url("../../photos/IMG_C5B019F67998-1.jpeg");
+    margin-left: -20px;
+  }
+}

@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./component/mainPage/mainPage";
+import SecondPage from "./component/secondPage/secondPage";
+import SettingPage from "./component/settingPage/settingPage";
+
+import data from "./data/data.json";
+import { useState } from "react";
+import "./App.scss";
 
 function App() {
+  const [isPrivateModeOn, setIsPrivateModeOn] = useState(false);
+
+  const clickHandler = (event) => {
+    event.preventDefault();
+    setIsPrivateModeOn(!isPrivateModeOn);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<MainPage data={data} isPrivateModeOn={isPrivateModeOn} />}
+          />
+          <Route path="create-group" element={<SecondPage data={data} />} />
+          <Route
+            path="setting"
+            element={
+              <SettingPage
+                data={data}
+                clickHandler={clickHandler}
+                isPrivateModeOn={isPrivateModeOn}
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
